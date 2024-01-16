@@ -9,7 +9,7 @@ namespace ex31_15
     class Hornet : Animal
     {
 
-        public Hornet(string name, float hp, float power, bool animal) : base(name, hp, power, animal)
+        public Hornet(string name, float hp, float power, bool animal, bool armor) : base(name, hp, power, animal, armor)
         {
 
         }
@@ -18,16 +18,25 @@ namespace ex31_15
         public override void Attack(Character destination)
         {
             bool animalJudge = destination.AnimalJudge;
+            bool armorJudge = destination.ArmorJudge;
             if (animalJudge)
             {
-                Console.WriteLine($"{this.name}は{destination.name}に毒針を刺した(動物は即死)！");
-                Console.WriteLine($"{destination.name}は{destination.hp}のダメージ");
-                destination.hp -= destination.hp;
-                Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");
+                if (armorJudge)
+                {
+                    Console.WriteLine($"\n{this.name}は{destination.name}に毒針を刺した！");
+                    Console.WriteLine($"{destination.name}は動物だ！しかし、{destination.name}は硬くて針がしっかり刺さらなかった");
+                    Console.WriteLine($"{destination.name}は{this.power}のダメージ");
+                    destination.hp -= this.power;
+                    Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");
+                }
+                else
+                {
+                    PoisonAttack(destination, "毒針を刺した");
+                }
             }
             else
             {
-                Console.WriteLine($"{this.name}は{destination.name}に毒針を刺した(動物は即死)！");
+                Console.WriteLine($"\n {this.name}は{destination.name}に毒針を刺した！");
                 Console.WriteLine($"{destination.name}は{this.power}のダメージ");
                 destination.hp -= this.power;
                 Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");

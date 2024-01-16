@@ -8,7 +8,7 @@ namespace ex31_15
 {
     class Cow : Animal
     {
-        public Cow(string name, float hp, float power, bool animal) : base(name, hp, power, animal)
+        public Cow(string name, float hp, float power, bool animal, bool armor) : base(name, hp, power, animal, armor)
         {
 
         }
@@ -16,14 +16,14 @@ namespace ex31_15
         {
             if (hp > 5)
             {
-                Console.WriteLine($"{this.name}は{destination.name}に角で突く攻撃！");
+                Console.WriteLine($"\n {this.name}は{destination.name}に角で突く攻撃！");
                 Console.WriteLine($"{destination.name}は{this.power}のダメージ");
                 destination.hp -= this.power;
                 Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");
             }
             else
             {
-                Console.WriteLine($"{base.name}は体力が少なくて角で突けなかった！");
+                Console.WriteLine($"\n{base.name}は体力が少なくて角で突けなかった！");
             }
         }
     }
