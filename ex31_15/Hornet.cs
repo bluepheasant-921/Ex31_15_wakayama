@@ -36,11 +36,19 @@ namespace ex31_15
             }
             else
             {
-                Console.WriteLine($"\n{this.name}は{destination.name}に毒針を刺した！");
-                Console.WriteLine($"{destination.name}は{this.power}のダメージ");
-                destination.hp -= this.power;
-                Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");
-
+                if (armorJudge)
+                {
+                    Console.WriteLine($"\n{this.name}は{destination.name}に毒針を刺した！");
+                    Console.WriteLine($"しかし硬すぎて刺さらなかった");
+                    Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");
+                }
+                else
+                {
+                    Console.WriteLine($"\n{this.name}は{destination.name}に毒針を刺した！");
+                    Console.WriteLine($"{destination.name}は{this.power}のダメージ");
+                    destination.hp -= this.power;
+                    Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");
+                }
 
             }
         }
