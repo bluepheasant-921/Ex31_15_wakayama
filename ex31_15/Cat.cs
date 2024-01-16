@@ -15,7 +15,7 @@ namespace ex31_15
 
         public override void Attack(Character destination)
         {
-            Console.WriteLine($"\n {this.name}は{destination.name}をひっかいた！");
+            Console.WriteLine($"\n{this.name}は{destination.name}をひっかいた！");
             Console.WriteLine($"{destination.name}は{this.power}のダメージ");
             destination.hp -= this.power;
             Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");

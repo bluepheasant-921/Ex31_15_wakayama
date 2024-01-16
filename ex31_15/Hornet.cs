@@ -36,7 +36,7 @@ namespace ex31_15
             }
             else
             {
-                Console.WriteLine($"\n {this.name}は{destination.name}に毒針を刺した！");
+                Console.WriteLine($"\n{this.name}は{destination.name}に毒針を刺した！");
                 Console.WriteLine($"{destination.name}は{this.power}のダメージ");
                 destination.hp -= this.power;
                 Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");

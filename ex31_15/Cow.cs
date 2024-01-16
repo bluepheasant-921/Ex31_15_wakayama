@@ -16,7 +16,7 @@ namespace ex31_15
         {
             if (hp > 5)
             {
-                Console.WriteLine($"\n {this.name}は{destination.name}に角で突く攻撃！");
+                Console.WriteLine($"\n{this.name}は{destination.name}に角で突く攻撃！");
                 Console.WriteLine($"{destination.name}は{this.power}のダメージ");
                 destination.hp -= this.power;
                 Console.WriteLine($"{destination.name}の残りのHPは{destination.hp}");
