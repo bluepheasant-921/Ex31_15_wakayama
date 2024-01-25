@@ -14,7 +14,7 @@ namespace ex31_15
             Tank tank2 = new Tank("がんタンク", 10000, 125, false, true);
             tank2.bullet = 5;
             Cat cat1 = new Cat("野良猫", 500, 15, true, false);
-            Cow cow1 = new Cow("黒毛和牛", 5, 50, true, false);
+            Cow cow1 = new Cow("黒毛和牛", 4, 50, true, false);
             Cow cow2 = new Cow("闘牛", 3000, 75, true, false);
             Hornet hornet1 = new Hornet("スズメバチ", 250, 40, true, false);
             Character[] characters = { character1, character2, tank1, tank2, cat1, cow1, cow2, hornet1 };

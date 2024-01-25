@@ -14,7 +14,7 @@ namespace ex31_15
         }
         public override void Attack(Character destination)
         {
-            if (hp > 5)
+            if (hp >= 5)
             {
                 Console.WriteLine($"\n{this.name}は{destination.name}に角で突く攻撃！");
                 Console.WriteLine($"{destination.name}は{this.power}のダメージ");
